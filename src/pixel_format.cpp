@@ -27,6 +27,9 @@ std::string to_string(PixelFormat f)
     case RGB8:
       return ("RGB8");
       break;
+    case BGR8:
+      return ("BGR8");
+      break;
     case Mono8:
       return ("Mono8");
       break;
@@ -43,6 +46,8 @@ PixelFormat from_nodemap_string(const std::string pixFmt)
     return (BayerRG8);
   } else if (pixFmt == "RGB8") {
     return RGB8;
+  } else if (pixFmt == "BGR8") {
+    return BGR8;
   } else if (pixFmt == "Mono8") {
     return (Mono8);
   } else {
